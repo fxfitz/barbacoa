@@ -1,5 +1,11 @@
 /barbacoa/version.json
 
+# Pycharm Files
+.idea/*
+
+# VSCode FIles
+.vscode/*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
