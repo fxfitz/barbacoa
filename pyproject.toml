@@ -9,3 +9,21 @@ author-email = "daniel@gtmanfred.com"
 home-page = "https://github.com/SADevs/barbacoa"
 classifiers = ["License :: OSI Approved :: Apache Software License"]
 
+[tool.flit.metadata.requires-extra]
+test = [
+    "pytest",
+    "pytest-cov",
+]
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist = py36
+isolated_build = True
+
+[testenv]
+deps =
+    pytest
+    pytest-cov
+commands = py.test --cov=barbacoa/ {posargs}
+"""
